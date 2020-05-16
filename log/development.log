@@ -2619,3 +2619,13 @@ Processing by RentalsController#edit as HTML
 Completed 200 OK in 15329ms (Views: 11319.7ms | ActiveRecord: 153.1ms | Allocations: 5127)
 
 
+Started GET "/" for ::1 at 2020-05-16 20:43:08 +0300
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 350)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 387ms (Views: 352.7ms | ActiveRecord: 0.0ms | Allocations: 8065)
+
+
