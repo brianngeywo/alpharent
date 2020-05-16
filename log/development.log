@@ -1,0 +1,2621 @@
+Started GET "/" for ::1 at 2020-05-15 23:13:33 +0300
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hacker/.rvm/gems/ruby-2.5.7/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hacker/.rvm/gems/ruby-2.5.7/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.2ms | Allocations: 459)
+Completed 200 OK in 109ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 2663)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (130.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (118.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRentals (20200515201706)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "rentals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200515201706"]]
+  [1m[35m (89.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-15 20:18:54.491778"], ["updated_at", "2020-05-15 20:18:54.491778"]]
+  [1m[35m (65.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDescriptionToRentals (20200515202235)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "rentals" ADD "description" text[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "rentals" ADD "created_at" datetime[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "rentals" ADD "updated_at" datetime[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200515202235"]]
+  [1m[35m (64.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Create (4.5ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "serova estate"], ["description", "nice and sweet"], ["created_at", "2020-05-15 20:35:02.041780"], ["updated_at", "2020-05-15 20:35:02.041780"]]
+  [1m[35m (88.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Create (4.1ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "kapsoya sweetness"], ["description", "useless words"], ["created_at", "2020-05-15 20:43:05.832800"], ["updated_at", "2020-05-15 20:43:05.832800"]]
+  [1m[35m (78.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Create (4.1ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "kapsoya"], ["description", "useless word 3"], ["created_at", "2020-05-15 20:44:09.927946"], ["updated_at", "2020-05-15 20:44:09.927946"]]
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Update (0.6ms)[0m  [1m[33mUPDATE "rentals" SET "title" = ?, "updated_at" = ? WHERE "rentals"."id" = ?[0m  [["title", "edited"], ["updated_at", "2020-05-15 20:47:33.617194"], ["id", 2]]
+  [1m[35m (105.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Destroy (0.8ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = ?[0m  [["id", 3]]
+  [1m[35m (97.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (2.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (1.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Create (2.1ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "article"], ["description", "useless word 3"], ["created_at", "2020-05-15 20:58:41.677849"], ["updated_at", "2020-05-15 20:58:41.677849"]]
+  [1m[35m (68.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (1.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/hacker/.rvm/gems/ruby-2.5.7/bin/rake:23)
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:05:35 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant RentalsController):
+  
+actionpack (6.0.3) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:09:30 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 81)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/hacker/sites/alpharent/public/packs
+[Webpacker] warning You don't appear to have an internet connection. Try the --offline flag to use the cache for registry queries.
+
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.43.0
+Time: 8109ms
+Built at: 05/16/2020 12:09:45 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 15103ms (Views: 15094.9ms | ActiveRecord: 0.0ms | Allocations: 15318)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:17:45 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 991)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2247)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @rental do |f| %>
+    2:   
+    3: <% end %>
+  
+app/views/rentals/new.html.erb:1
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:19:11 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 384)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 0.8ms | Allocations: 9570)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:20:16 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 34.1ms | Allocations: 4326)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 8771)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:21:23 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 80.7ms | Allocations: 5888)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 91.2ms | ActiveRecord: 0.0ms | Allocations: 10319)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:22:02 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 5370)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:25:19 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 817)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 5349)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:25:51 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.0ms | Allocations: 5340)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 00:27:34 +0300
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rentals" for ::1 at 2020-05-16 00:28:48 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"yE8MeACQuH8FLT+AR2xSbPpwpQio8jztbPXgakPHE5aTnPKRT+5OciHxAbuUAZYBMufSHNimhK0S7zkm2bb5Mg==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 629)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/rentals_controller.rb:6:in `initialize'
+app/controllers/rentals_controller.rb:6:in `new'
+app/controllers/rentals_controller.rb:6:in `create'
+Started POST "/rentals" for ::1 at 2020-05-16 00:29:21 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"yE8MeACQuH8FLT+AR2xSbPpwpQio8jztbPXgakPHE5aTnPKRT+5OciHxAbuUAZYBMufSHNimhK0S7zkm2bb5Mg==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.9ms | Allocations: 5066)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/rentals_controller.rb:6:in `create'
+Started POST "/rentals" for ::1 at 2020-05-16 00:31:42 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"yE8MeACQuH8FLT+AR2xSbPpwpQio8jztbPXgakPHE5aTnPKRT+5OciHxAbuUAZYBMufSHNimhK0S7zkm2bb5Mg==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+Completed 500 Internal Server Error in 558ms (ActiveRecord: 0.0ms | Allocations: 98741)
+
+
+  
+NameError (undefined local variable or method `rental' for #<RentalsController:0x00007f133d0b30b8>
+Did you mean?  rental_url):
+  
+app/controllers/rentals_controller.rb:6:in `create'
+Started POST "/rentals" for ::1 at 2020-05-16 00:54:16 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"yE8MeACQuH8FLT+AR2xSbPpwpQio8jztbPXgakPHE5aTnPKRT+5OciHxAbuUAZYBMufSHNimhK0S7zkm2bb5Mg==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 13.7ms | ActiveRecord: 1.4ms | Allocations: 10909)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 00:54:18 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"pB+1wy0Z4xLdUe5EuoLbP2U9ZjJ5u/+dygScxPW1Vdf/zEsqYmcVH/mN0H9p7x9SraoRJgnvR920HkWIb8S/cw==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 625)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 5131)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 00:54:22 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"2kfe5DkuesXCpldBgVS+cD+/TsyHhp18u4WU74gXUjiBlCANdlCMyOZ6aXpSOXod9yg52PfSJTzFn02jEma4nA==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 5110)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/rentals" for ::1 at 2020-05-16 00:55:33 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"yEbm3CLCPqdkp51nBlt5X8K1+QLGcbtRxPP9aGzFh86TlRg1bbzIqkB7o1zVNr0yCiKOFrYlAxG66SQk9rRtag==", "rental"=>{"title"=>"royal Apartments", "description"=>"awerfg"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 5117)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 00:56:54 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/rentals_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/rentals_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/rentals_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/rentals" for ::1 at 2020-05-16 00:57:12 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:57:23 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 14.9ms | ActiveRecord: 1.4ms | Allocations: 8873)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 00:57:39 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"fy0HTn/UgiGT2v/clkMHSGFgzj1ADm7wrTZ8Cl+lxG8k/vmnMKp0LLcGwedFLsMlqfe5KTBa1rDTLKVGxdQuyw==", "rental"=>{"title"=>"royal Apartments", "description"=>"two bedroom apartment"}, "commit"=>"Create rental"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:7:in `create'
+  [1m[36mRental Create (5.3ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "royal Apartments"], ["description", "two bedroom apartment"], ["created_at", "2020-05-15 21:57:39.454399"], ["updated_at", "2020-05-15 21:57:39.454399"]]
+  ↳ app/controllers/rentals_controller.rb:7:in `create'
+  [1m[35m (94.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:7:in `create'
+No template found for RentalsController#create, rendering head :no_content
+Completed 204 No Content in 141ms (ActiveRecord: 99.9ms | Allocations: 5596)
+
+
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/rentals/new" for ::1 at 2020-05-16 00:58:56 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 4226)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 01:00:05 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `rentals_show' for RentalsController:Class):
+  
+app/controllers/rentals_controller.rb:9:in `<class:RentalsController>'
+app/controllers/rentals_controller.rb:1:in `<top (required)>'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/hacker/.rvm/gems/ruby-2.5.7/bin/rake:23)
+Started GET "/rentals/new" for ::1 at 2020-05-16 01:03:05 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `rentals_path' for RentalsController:Class):
+  
+app/controllers/rentals_controller.rb:9:in `<class:RentalsController>'
+app/controllers/rentals_controller.rb:1:in `<top (required)>'
+Started GET "/rentals/new" for ::1 at 2020-05-16 01:03:30 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `rental_path' for RentalsController:Class):
+  
+app/controllers/rentals_controller.rb:9:in `<class:RentalsController>'
+app/controllers/rentals_controller.rb:1:in `<top (required)>'
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:36:26 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 33.3ms | ActiveRecord: 2.1ms | Allocations: 8808)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:36:36 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"Nv6V7qH7SIwN6tFz49xratYZXL916puKoO8i9lkomWptLWsH7oW+gSk270gwsa8HHo4rqwW+I8re9fu6w1lzzg==", "rental"=>{"title"=>"Los Blancos Estate", "description"=>"svihfsvbadk"}, "commit"=>"Create rental"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:7:in `create'
+  [1m[36mRental Create (24.1ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Los Blancos Estate"], ["description", "svihfsvbadk"], ["created_at", "2020-05-16 05:36:36.112257"], ["updated_at", "2020-05-16 05:36:36.112257"]]
+  ↳ app/controllers/rentals_controller.rb:7:in `create'
+  [1m[35m (197.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:7:in `create'
+Redirected to http://localhost:3000/rentals/6
+Completed 302 Found in 245ms (ActiveRecord: 221.5ms | Allocations: 4150)
+
+
+Started GET "/rentals/6" for ::1 at 2020-05-16 08:36:36 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/6" for ::1 at 2020-05-16 08:37:52 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rentals" for ::1 at 2020-05-16 08:43:10 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"Nv6V7qH7SIwN6tFz49xratYZXL916puKoO8i9lkomWptLWsH7oW+gSk270gwsa8HHo4rqwW+I8re9fu6w1lzzg==", "rental"=>{"title"=>"Los Blancos", "description"=>"svihfsvbadk"}, "commit"=>"Create rental"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+  [1m[36mRental Create (0.4ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Los Blancos"], ["description", "svihfsvbadk"], ["created_at", "2020-05-16 05:43:10.409149"], ["updated_at", "2020-05-16 05:43:10.409149"]]
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+  [1m[35m (92.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+Redirected to http://localhost:3000/rentals/7
+Completed 302 Found in 122ms (ActiveRecord: 94.4ms | Allocations: 8622)
+
+
+Started GET "/rentals/7" for ::1 at 2020-05-16 08:43:10 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rentals" for ::1 at 2020-05-16 08:43:19 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"Nv6V7qH7SIwN6tFz49xratYZXL916puKoO8i9lkomWptLWsH7oW+gSk270gwsa8HHo4rqwW+I8re9fu6w1lzzg==", "rental"=>{"title"=>"", "description"=>"svihfsvbadk"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 5741)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:43:21 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"30qGYz1GP9wZQyT3KZK9C3Vhwhve7si0/OD1evuZp5WEmXiKcjjJ0T2fGsz6/3lmvfa1D666cPSC+iw2YehNMQ==", "rental"=>{"title"=>"", "description"=>"svihfsvbadk"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 5440)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:43:22 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"FUqJBPI/8VoN6A+XvHMPFhbI1pTnB4sTfGILAX2mErJOmXftvUEHVyk0MaxvHst73l+hgJdTM1MCeNJN59f4Fg==", "rental"=>{"title"=>"", "description"=>"svihfsvbadk"}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 5447)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 08:44:05 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:44:16 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4242)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:19 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"vTAq8lyhjvVDgGfoTv/ruKOQVeyiZQ3pZekZejKSOYbm49QbE994+GdcWdOdki/Vawci+NIxtakb88A2qOPTIg==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 6130)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:21 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"gEAoRPx7q+p8b9Hd6aRR2pEZFBmEnq1inA4lDgusXiHbk9atswVd51iz7+Y6yZW3WY5jDfTKFSLiFPxCkd20hQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 6107)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:23 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"71S4BSVcQwvikuiaCstNE/KcngndWL1U1dEXnp9GdVu0h0bsaiK1BsZO1qHZpol+OgvpHa0MBRSry87SBTef/w==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 6122)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:23 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"JN4TghzxcsgmqO2qfxoRAOzxHTC8DcWzeQBXbO06Vjt/De1rU4+ExQJ005Gsd9VtJGZqJMxZffMHGo4gd0u8nw==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 6109)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:24 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"Ll9/0ePxDl31AafvfU6y4saqMWNJxbnScqVKglAVHeF1jIE4rI/4UNHdmdSuI3aPDj1GdzmRAZIMv5POymT3RQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 6111)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:44:30 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 610)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4258)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:36 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"uQAO/A1leMrn7JDu82iwuxlgKv5U2Aat2ByXuk8poe3i0/AVQhuOx8MwrtUgBXTW0fdd6iSMvu2mBk721VhLSQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 618)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6115)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:44:41 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"I1fl7p+1tR+HCpjK20RpnI2B9GEsftmSV7yWGynzJOB4hBsH0MtDEqPWpvEIKa3xRRaDdVwqYdIppk9Xs4LORA==", "rental"=>{"title"=>"c", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 619)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 5783)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:57:21 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 915)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 5550)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:58:48 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 619)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 4255)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:58:51 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 4244)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:58:55 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 4235)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 08:59:15 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 4232)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 08:59:18 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"n703Yq7sK0D1dCYJyzRC7ZAVjdB+M2Tqi55aMxfyc+XEbsmL4ZLdTdGoGDIYWYaAWIL6xA5n3Kr1hIN/jYOZQQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1184)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 6659)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 09:00:43 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/rentals" for ::1 at 2020-05-16 09:00:48 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"n703Yq7sK0D1dCYJyzRC7ZAVjdB+M2Tqi55aMxfyc+XEbsmL4ZLdTdGoGDIYWYaAWIL6xA5n3Kr1hIN/jYOZQQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1475)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 7960)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 09:01:14 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"IlGxwA82Q6utw5y5cmbfEOVUB4PuKKkwGzB/sbW2Cx95gk8pQEi1pokfooKhCxt9LcNwl558EXBlKqb9L8fhuw==", "rental"=>{"title"=>"1 Bed Flat & Apartment", "description"=>"bla bla bla bla"}, "commit"=>"Create rental"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+  [1m[36mRental Create (4.5ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "1 Bed Flat & Apartment"], ["description", "bla bla bla bla"], ["created_at", "2020-05-16 06:01:14.295688"], ["updated_at", "2020-05-16 06:01:14.295688"]]
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+  [1m[35m (63.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+Redirected to http://localhost:3000/rentals/8
+Completed 302 Found in 93ms (ActiveRecord: 68.0ms | Allocations: 3959)
+
+
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:01:14 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:02:15 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:21:in `show'
+Completed 404 Not Found in 18ms (ActiveRecord: 1.1ms | Allocations: 3382)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Rental with 'id'=id):
+  
+app/controllers/rentals_controller.rb:21:in `show'
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:02:36 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+Completed 500 Internal Server Error in 491ms (ActiveRecord: 0.0ms | Allocations: 98884)
+
+
+  
+NameError (undefined local variable or method `id' for #<RentalsController:0x00007f133ce03f20>):
+  
+app/controllers/rentals_controller.rb:21:in `show'
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:03:13 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:21:in `show'
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 2.4ms | Allocations: 7105)
+
+
+  
+ActionController::MissingExactTemplate (RentalsController#show is missing a template for request formats: text/html):
+  
+actionpack (6.0.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:04:05 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:21:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 0.2ms | Allocations: 5257)
+
+
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:04:05 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:21:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 18.3ms | ActiveRecord: 0.6ms | Allocations: 4177)
+
+
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:06:11 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:21:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 25.5ms | ActiveRecord: 0.7ms | Allocations: 5300)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 09:07:15 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 960)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 4724)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 09:08:00 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 5510)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 09:08:15 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"9tedeb6o11p2CZ2yS0DvMUQGFv6D1Nsh/4hNZrv5tEStBGOQ8dYhV1LVo4mYLStcjJFh6vOAY2GBkpQqIYhe4A==", "rental"=>{"title"=>"Baraton Hostels Estate", "description"=>"test show and new"}, "commit"=>"Create rental"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+  [1m[36mRental Create (0.5ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Baraton Hostels Estate"], ["description", "test show and new"], ["created_at", "2020-05-16 06:08:15.030820"], ["updated_at", "2020-05-16 06:08:15.030820"]]
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+  [1m[35m (180.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:12:in `create'
+Redirected to http://localhost:3000/rentals/9
+Completed 302 Found in 206ms (ActiveRecord: 181.3ms | Allocations: 4110)
+
+
+Started GET "/rentals/9" for ::1 at 2020-05-16 09:08:15 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:21:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 4469)
+
+
+Started GET "/" for ::1 at 2020-05-16 09:13:10 +0300
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 194ms (Views: 160.7ms | ActiveRecord: 0.0ms | Allocations: 8016)
+
+
+Started GET "/" for ::1 at 2020-05-16 09:14:21 +0300
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 4683)
+
+
+Started GET "/rentals/8/edit" for ::1 at 2020-05-16 09:15:17 +0300
+  
+AbstractController::ActionNotFound (The action 'edit' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/8/edit" for ::1 at 2020-05-16 09:16:17 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:6:in `edit'
+Completed 406 Not Acceptable in 44ms (ActiveRecord: 2.1ms | Allocations: 8005)
+
+
+  
+ActionController::MissingExactTemplate (RentalsController#edit is missing a template for request formats: text/html):
+  
+actionpack (6.0.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals/8/edit" for ::1 at 2020-05-16 09:16:58 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:6:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 0.3ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 5294)
+
+
+Started GET "/rentals/8/edit" for ::1 at 2020-05-16 09:17:31 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 3728)
+
+
+Started GET "/rentals/8/edit" for ::1 at 2020-05-16 09:19:08 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1172)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2424)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>edit rental</h1>
+    2: <%= form_for @rental do |f| %>
+    3: <% if @rental.errors.any? %>
+    4: <h2>you encountered the following errors</h2>
+    5:   <ul>
+  
+app/views/rentals/edit.html.erb:2
+Started GET "/rentals/8/edit" for ::1 at 2020-05-16 09:20:11 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:6:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 98.5ms | Allocations: 3106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 161ms (Views: 127.0ms | ActiveRecord: 4.0ms | Allocations: 12806)
+
+
+Started PATCH "/rentals/8" for ::1 at 2020-05-16 09:21:24 +0300
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PATCH "/rentals/8" for ::1 at 2020-05-16 09:22:45 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#update as HTML
+  Parameters: {"authenticity_token"=>"eCmLQ+MyI2dCCmvIYAXbGuW9ewCI0QBCgr+t6iJ5xJQj+nWqrEzVambWVfOzaB93LSoMFPiFuAL8pXSmuAguMA==", "rental"=>{"title"=>"1 Bed Flat & Apartment", "description"=>"bla bla bla bla edited"}, "commit"=>"Create rental", "id"=>"8"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:24)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms | Allocations: 6018)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/rentals_controller.rb:24:in `update'
+Started PATCH "/rentals/8" for ::1 at 2020-05-16 09:23:15 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#update as HTML
+  Parameters: {"authenticity_token"=>"eCmLQ+MyI2dCCmvIYAXbGuW9ewCI0QBCgr+t6iJ5xJQj+nWqrEzVambWVfOzaB93LSoMFPiFuAL8pXSmuAguMA==", "rental"=>{"title"=>"1 Bed Flat & Apartment", "description"=>"bla bla bla bla edited"}, "commit"=>"Create rental", "id"=>"8"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:24)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[36mRental Update (0.5ms)[0m  [1m[33mUPDATE "rentals" SET "description" = ?, "updated_at" = ? WHERE "rentals"."id" = ?[0m  [["description", "bla bla bla bla edited"], ["updated_at", "2020-05-16 06:23:15.970230"], ["id", 8]]
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[35m (82.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+Redirected to http://localhost:3000/rentals/8
+Completed 302 Found in 117ms (ActiveRecord: 83.8ms | Allocations: 9709)
+
+
+Started GET "/rentals/8" for ::1 at 2020-05-16 09:23:16 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:20:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 0.3ms | Allocations: 5313)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 09:27:05 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 4686)
+
+
+Started GET "/rentals/6" for ::1 at 2020-05-16 09:27:15 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:20:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.2ms | Allocations: 4186)
+
+
+Started GET "/rentals/6/edit" for ::1 at 2020-05-16 09:27:20 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:6:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5282)
+
+
+Started PATCH "/rentals/6" for ::1 at 2020-05-16 09:27:26 +0300
+Processing by RentalsController#update as HTML
+  Parameters: {"authenticity_token"=>"8p4i80XpeJo0mOGNuI9DkmAn3z5DNUnDedg1JAgTk4ipTdwaCpeOlxBE37Zr4of/qLCoKjNh8YMHwuxokmJ5LA==", "rental"=>{"title"=>"Los Blancos Estate edited", "description"=>"svihfsvbadk"}, "commit"=>"update rental", "id"=>"6"}
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:24)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[36mRental Update (1.3ms)[0m  [1m[33mUPDATE "rentals" SET "title" = ?, "updated_at" = ? WHERE "rentals"."id" = ?[0m  [["title", "Los Blancos Estate edited"], ["updated_at", "2020-05-16 06:27:27.015301"], ["id", 6]]
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[35m (91.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+Redirected to http://localhost:3000/rentals/6
+Completed 302 Found in 137ms (ActiveRecord: 93.7ms | Allocations: 4973)
+
+
+Started GET "/rentals/6" for ::1 at 2020-05-16 09:27:27 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:20:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 22.0ms | ActiveRecord: 0.5ms | Allocations: 4207)
+
+
+Started GET "/rentals/6/edit" for ::1 at 2020-05-16 09:27:50 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:6:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 954)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.2ms | Allocations: 6145)
+
+
+Started PATCH "/rentals/6" for ::1 at 2020-05-16 09:27:56 +0300
+Processing by RentalsController#update as HTML
+  Parameters: {"authenticity_token"=>"XJ0NpeBWeRVehdAJA0TQMwRudbuiy1sK+GCg2qg8YSEHTvNMryiPGHpZ7jLQKRRezPkCr9Kf40qGenmWMk2LhQ==", "rental"=>{"title"=>"Los Blancos Estate edited again", "description"=>"svihfsvbadk"}, "commit"=>"update rental", "id"=>"6"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:24)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[36mRental Update (4.4ms)[0m  [1m[33mUPDATE "rentals" SET "title" = ?, "updated_at" = ? WHERE "rentals"."id" = ?[0m  [["title", "Los Blancos Estate edited again"], ["updated_at", "2020-05-16 06:27:56.984926"], ["id", 6]]
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[35m (103.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+Redirected to http://localhost:3000/rentals/6
+Completed 302 Found in 156ms (ActiveRecord: 109.2ms | Allocations: 4898)
+
+
+Started GET "/rentals/6" for ::1 at 2020-05-16 09:27:57 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:20:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 27.1ms | ActiveRecord: 0.7ms | Allocations: 4473)
+
+
+Started GET "/rentals/6/edit" for ::1 at 2020-05-16 09:30:30 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:6:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 4831)
+
+
+Started PATCH "/rentals/6" for ::1 at 2020-05-16 09:30:36 +0300
+Processing by RentalsController#update as HTML
+  Parameters: {"authenticity_token"=>"0F33w8pNTDuJUsEEVTm+KMKfit0wR5ueZDrnAvOZxViLjgkqhTO6Nq2O/z+GVHpFCgj9yUATI94aID5Oaegv/A==", "rental"=>{"title"=>"Los Blancos Estate edited again", "description"=>""}, "commit"=>"update rental", "id"=>"6"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:24)
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 6874)
+
+
+Started PATCH "/rentals/6" for ::1 at 2020-05-16 09:30:53 +0300
+Processing by RentalsController#update as HTML
+  Parameters: {"authenticity_token"=>"hJUOHC7vCTQ6DuQrVvcbEBVwAMlfdHCozgqd1dT6YXLfRvD1YZH/OR7S2hCFmt993ed33S8gyOiwEESZTouL1g==", "rental"=>{"title"=>"Los Blancos Estate edited again", "description"=>"bla bla bla bla"}, "commit"=>"update rental", "id"=>"6"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:23:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:24)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[36mRental Update (1.1ms)[0m  [1m[33mUPDATE "rentals" SET "description" = ?, "updated_at" = ? WHERE "rentals"."id" = ?[0m  [["description", "bla bla bla bla"], ["updated_at", "2020-05-16 06:30:53.305443"], ["id", 6]]
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+  [1m[35m (88.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:24:in `update'
+Redirected to http://localhost:3000/rentals/6
+Completed 302 Found in 105ms (ActiveRecord: 89.9ms | Allocations: 4052)
+
+
+Started GET "/rentals/6" for ::1 at 2020-05-16 09:30:53 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:20:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 4333)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 09:32:19 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for RentalsController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals" for ::1 at 2020-05-16 09:32:48 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+Completed 406 Not Acceptable in 12ms (ActiveRecord: 0.0ms | Allocations: 2424)
+
+
+  
+ActionController::MissingExactTemplate (RentalsController#index is missing a template for request formats: text/html):
+  
+actionpack (6.0.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rentals" for ::1 at 2020-05-16 09:33:24 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 4689)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 09:33:35 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 4685)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 09:55:54 +0300
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 377)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/hacker/sites/alpharent/public/packs
+[Webpacker] Hash: 174872d271bb4beac785
+Version: webpack 4.43.0
+Time: 60300ms
+Built at: 05/16/2020 9:57:06 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5bcba4fb5439b2e1aa93.js   2.69 MiB  application  [emitted] [immutable]  application
+js/application-5bcba4fb5439b2e1aa93.js.map   2.83 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-5bcba4fb5439b2e1aa93.js js/application-5bcba4fb5439b2e1aa93.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 784 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./app/javascript/stylesheets/application.scss 2.55 MiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+Completed 200 OK in 77187ms (Views: 77114.1ms | ActiveRecord: 0.0ms | Allocations: 10250)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:01:18 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/index.html.erb within layouts/application (Duration: 94.3ms | Allocations: 5507)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms | Allocations: 6770)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4:     <th>Title</th>
+    5:     <th>Description</th>
+    6:   </tr>
+    7:   <% @rentals.each do |rental| %>
+    8:     <tr>
+    9:       <td><% rental.title %></td>
+   10:       <td><% rental.Description %></td>
+  
+app/views/rentals/index.html.erb:7
+Started GET "/rentals" for ::1 at 2020-05-16 10:03:36 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (24.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (Duration: 92.4ms | Allocations: 7580)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 27.8ms | Allocations: 9374)
+
+
+  
+ActionView::Template::Error (undefined method `Title' for #<Rental:0x00007f0ac0971ec8>
+Did you mean?  title=
+               title?):
+     6:   </tr>
+     7:   <% @rentals.each do |rental| %>
+     8:     <tr>
+     9:       <td><% rental.Title %></td>
+    10:       <td><% rental.Description %></td>
+    11:     </tr>
+    12:   <% end %>
+  
+app/views/rentals/index.html.erb:9
+app/views/rentals/index.html.erb:7
+Started GET "/rentals" for ::1 at 2020-05-16 10:03:54 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 634ms (Views: 629.0ms | ActiveRecord: 0.8ms | Allocations: 5627)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:04:45 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.0ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (Duration: 23.7ms | Allocations: 4746)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 44.1ms | ActiveRecord: 2.1ms | Allocations: 8997)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:05:08 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  Rendered rentals/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1067)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2336)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>#list</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <% @rentals.each do |Rental| %>
+    <tr>
+      <td><% rental.title %></td>
+      <td><% rental.description %></td>
+    </tr>
+  <% end %>
+</table>
+):
+1:    <h1>#list</h1>
+2:    <table>
+3:      <tr>
+4:        <th>Title</th>
+5:        <th>Description</th>
+6:      </tr>
+7:      <% @rentals.each do |Rental| %>
+8:        <tr>
+9:          <td><% rental.title %></td>
+10:          <td><% rental.description %></td>
+11:        </tr>
+12:      <% end %>
+13:    </table>
+  
+app/views/rentals/index.html.erb:7: formal argument cannot be a constant
+app/views/rentals/index.html.erb:7: formal argument cannot be a constant
+app/views/rentals/index.html.erb:7: formal argument cannot be a constant
+app/views/rentals/index.html.erb:7: formal argument cannot be a constant
+app/views/rentals/index.html.erb:7: formal argument cannot be a constant
+app/views/rentals/index.html.erb:7: formal argument cannot be a constant
+Started GET "/rentals" for ::1 at 2020-05-16 10:05:44 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:7
+  Rendered rentals/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 928)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 0.8ms | Allocations: 5592)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:06:26 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:8
+  Rendered rentals/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 978)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 29.2ms | ActiveRecord: 0.3ms | Allocations: 5652)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:06:57 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:8
+  Rendered rentals/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 3191)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.7ms | Allocations: 4442)
+
+
+  
+ActionView::Template::Error (undefined method `timestamps' for #<Rental:0x00005624fd4917e0>):
+    10:       <td><%= rental.title %></td>
+    11:       <td><%= rental.description %></td>
+    12:       <td><%= rental.id %></td>
+    13:       <td><%= rental.timestamps %></td>
+    14:     </tr>
+    15:   <% end %>
+    16: </table>
+  
+app/views/rentals/index.html.erb:13
+app/views/rentals/index.html.erb:8
+Started GET "/rentals" for ::1 at 2020-05-16 10:07:07 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:8
+  Rendered rentals/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 3242)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms | Allocations: 4499)
+
+
+  
+ActionView::Template::Error (undefined method `time' for #<Rental:0x00005624fbd5b710>):
+    10:       <td><%= rental.title %></td>
+    11:       <td><%= rental.description %></td>
+    12:       <td><%= rental.id %></td>
+    13:       <td><%= rental.time %></td>
+    14:     </tr>
+    15:   <% end %>
+    16: </table>
+  
+app/views/rentals/index.html.erb:13
+app/views/rentals/index.html.erb:8
+Started GET "/rentals" for ::1 at 2020-05-16 10:07:19 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:8
+  Rendered rentals/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 3176)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.7ms | Allocations: 4432)
+
+
+  
+ActionView::Template::Error (undefined method `datetime' for #<Rental:0x00005624fea89ea8>):
+    10:       <td><%= rental.title %></td>
+    11:       <td><%= rental.description %></td>
+    12:       <td><%= rental.id %></td>
+    13:       <td><%= rental.datetime %></td>
+    14:     </tr>
+    15:   <% end %>
+    16: </table>
+  
+app/views/rentals/index.html.erb:13
+app/views/rentals/index.html.erb:8
+Started GET "/rentals" for ::1 at 2020-05-16 10:07:31 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:8
+  Rendered rentals/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 966)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 5615)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:09:36 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:9
+  Rendered rentals/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1037)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 40.3ms | ActiveRecord: 0.9ms | Allocations: 5693)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:09:39 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 789.8ms | Allocations: 6712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 832ms (Views: 827.7ms | ActiveRecord: 0.0ms | Allocations: 10413)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:09:58 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 4269)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:10:03 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:9
+  Rendered rentals/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 823)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 4481)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:10:08 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 4262)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:10:11 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:9
+  Rendered rentals/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 822)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 0.9ms | Allocations: 4473)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:10:39 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:9
+  Rendered rentals/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.4ms | Allocations: 5691)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:10:41 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4702)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:10:48 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 613)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 4269)
+
+
+Started POST "/rentals" for ::1 at 2020-05-16 10:11:22 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"X/ZmnUXOSTgLgNDUZiuJB7b9GVRG+XfTyUxWez8TRCkEJZh0CrC/NS9c7u+1Rk1qfmpuQDatz5O3Vo83pWKujQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"Create rental"}
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 7031)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/hacker/.rvm/gems/ruby-2.5.7/bin/rake:23)
+Started GET "/rentals" for ::1 at 2020-05-16 10:12:41 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 64.4ms | ActiveRecord: 0.4ms | Allocations: 5703)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:12:43 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 827)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.3ms | Allocations: 4469)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:14:46 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1945)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms | Allocations: 3221)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"rentals"}, missing required keys: [:id]):
+    13:       <td><%= rental.title %></td>
+    14:       <td><%= rental.description %></td>
+    15:       <td><%= rental.id %></td>
+    16:       <td><%= link_to 'edit', edit_rental_path %></td>
+    17:       <td><%= rental.id %></td>
+    18:     </tr>
+    19:   <% end %>
+  
+app/views/rentals/index.html.erb:16
+app/views/rentals/index.html.erb:11
+Started GET "/rentals" for ::1 at 2020-05-16 10:16:33 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1476)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 0.3ms | Allocations: 6145)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:16:37 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 19.7ms | Allocations: 965)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 34.0ms | ActiveRecord: 0.3ms | Allocations: 9455)
+
+
+Started GET "/rentals/2" for ::1 at 2020-05-16 10:16:43 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:24:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 16.2ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.2ms | Allocations: 4482)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:18:20 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.5ms | Allocations: 6135)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:18:23 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 948)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 4744)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:18:26 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 4901)
+
+
+Started GET "/rentals/1" for ::1 at 2020-05-16 10:18:29 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:24:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 4534)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:18:31 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.6ms | Allocations: 4889)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:18:32 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 5345)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:18:34 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 4896)
+
+
+Started GET "/rentals/1" for ::1 at 2020-05-16 10:19:26 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:24:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 360.0ms | Allocations: 148257)
+Completed 500 Internal Server Error in 365ms (ActiveRecord: 0.1ms | Allocations: 150084)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `rental' for #<#<Class:0x00007f0ac0ab3bb0>:0x00007f0ac0ab1860>
+Did you mean?  @rental):
+    5: <p>
+    6:   description: <%= @rental.description %>
+    7: </p>
+    8: <%= link_to 'edit', edit_rental_path(rental) %>
+    9: <%= link_to 'rentals listing', rentals_path %>
+  
+app/views/rentals/show.html.erb:8
+Started GET "/rentals/1" for ::1 at 2020-05-16 10:19:44 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:24:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 226)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 5442)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:19:47 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 5362)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:19:52 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 5262)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:20:55 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.4ms | Allocations: 6123)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:20:57 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 995)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 5340)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:20:59 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 4906)
+
+
+Started GET "/rentals/1" for ::1 at 2020-05-16 10:21:00 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:24:in `show'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 4573)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:21:03 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.2ms | Allocations: 4888)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:24:23 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 6.8ms | Allocations: 951)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 33.8ms | ActiveRecord: 0.7ms | Allocations: 6531)
+
+
+Started GET "/rentals/1/edit" for ::1 at 2020-05-16 10:24:25 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 9.9ms | Allocations: 662)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 0.4ms | Allocations: 4979)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:24:33 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 3.7ms | Allocations: 623)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 4640)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-16 10:25:17 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 8.8ms | Allocations: 908)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 5923)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:27:24 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2011)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 3279)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rentals"}, missing required keys: [:id]):
+    15:       <td><%= rental.id %></td>
+    16:       <td><%= link_to 'edit', edit_rental_path(rental) %></td>
+    17:       <td><%= link_to 'show', rental_path(rental) %></td>
+    18:       <td><%= link_to 'delete listing', rental_path, method: :delete %></td>
+    19:     </tr>
+    20:   <% end %>
+    21: </table>
+  
+app/views/rentals/index.html.erb:18
+app/views/rentals/index.html.erb:11
+Started GET "/rentals" for ::1 at 2020-05-16 10:30:52 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (15.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 46.9ms | Allocations: 5734)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 19.9ms | Allocations: 6895)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rentals"}, missing required keys: [:id]):
+    15:       <td><%= rental.id %></td>
+    16:       <td><%= link_to 'edit', edit_rental_path(rental) %></td>
+    17:       <td><%= link_to 'show', rental_path(rental) %></td>
+    18:       <td><%= link_to 'delete listing', rental_path, method: :delete %></td>
+    19:     </tr>
+    20:   <% end %>
+    21: </table>
+  
+app/views/rentals/index.html.erb:18
+app/views/rentals/index.html.erb:11
+Started GET "/rentals" for ::1 at 2020-05-16 10:32:13 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 5719)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.9ms | Allocations: 6880)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"rentals"}, missing required keys: [:id]):
+    15:       <td><%= rental.id %></td>
+    16:       <td><%= link_to 'edit', edit_rental_path(rental) %></td>
+    17:       <td><%= link_to 'show', rental_path(rental) %></td>
+    18:       <td><%= link_to 'delete listing', rental_path, method: :delete %></td>
+    19:     </tr>
+    20:   <% end %>
+    21: </table>
+  
+app/views/rentals/index.html.erb:18
+app/views/rentals/index.html.erb:11
+Started GET "/rentals" for ::1 at 2020-05-16 10:32:44 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 158ms (Views: 154.1ms | ActiveRecord: 0.8ms | Allocations: 6553)
+
+
+Started DELETE "/rentals/1" for ::1 at 2020-05-16 10:32:47 +0300
+Processing by RentalsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1BKt1fp6c5N0Oet4WT7HkLIrrnab1xOK0dKvq7qHYg6PwVM8tQSFnlDl1UOKUwP9erzZYuuDq8qvyHbnIPaIqg==", "id"=>"1"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:38:in `destroy'
+  [1m[36mRental Destroy (0.4ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/rentals_controller.rb:38:in `destroy'
+  [1m[35m (157.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/rentals
+Completed 302 Found in 178ms (ActiveRecord: 157.8ms | Allocations: 4302)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:32:47 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1482)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.6ms | Allocations: 5375)
+
+
+Started GET "/rentals/2/edit" for ::1 at 2020-05-16 10:32:53 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 33.9ms | Allocations: 960)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 45.6ms | Allocations: 1403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.2ms | Allocations: 5736)
+
+
+Started DELETE "/rentals/2" for ::1 at 2020-05-16 10:32:56 +0300
+Processing by RentalsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HtBdnKN7awbG147ieTl3xibojH8s6wWhLN+i+wB+zOtFA6N17AWdC+ILsNmqVLOr7n/7a1y/veFSxXu3mg8mTw==", "id"=>"2"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:37:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:38:in `destroy'
+  [1m[36mRental Destroy (0.5ms)[0m  [1m[31mDELETE FROM "rentals" WHERE "rentals"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/rentals_controller.rb:38:in `destroy'
+  [1m[35m (86.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/rentals
+Completed 302 Found in 108ms (ActiveRecord: 87.5ms | Allocations: 4024)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:32:57 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1361)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 5032)
+
+
+Started GET "/rentals" for ::1 at 2020-05-16 10:34:01 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 50.7ms | ActiveRecord: 0.4ms | Allocations: 6335)
+
+
+Started GET "/rentals/4/edit" for ::1 at 2020-05-16 10:34:14 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:10:in `edit'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.5ms | Allocations: 958)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1413)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 5751)
+
+
+Started GET "/rentals/4/edit" for ::1 at 2020-05-16 10:39:38 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRental Load (9.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:46:in `set_rental'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.1ms | Allocations: 719)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 293ms (Views: 248.4ms | ActiveRecord: 10.7ms | Allocations: 9882)
+
+
+Started GET "/rentals/4/edit" for ::1 at 2020-05-16 11:08:48 +0300
+  [1m[35m (626.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRental Load (153.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:46:in `set_rental'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 3797.9ms | Allocations: 665)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 4374.0ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15329ms (Views: 11319.7ms | ActiveRecord: 153.1ms | Allocations: 5127)
+
+

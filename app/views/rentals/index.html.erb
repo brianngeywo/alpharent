@@ -1,0 +1,21 @@
+<h1>#list</h1>
+<p>
+<%= link_to 'Add new listing', new_rental_path %>
+</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>id</th>
+  </tr>
+  <% @rentals.each do |rental| %>
+    <tr>
+      <td><%= rental.title %></td>
+      <td><%= rental.description %></td>
+      <td><%= rental.id %></td>
+      <td><%= link_to 'edit', edit_rental_path(rental) %></td>
+      <td><%= link_to 'show', rental_path(rental) %></td>
+      <td><%= link_to 'delete listing', rental, method: :delete,data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
