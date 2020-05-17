@@ -1,16 +1,16 @@
-<h1>#show</h1>
+<% if @rental.user %>
+  <p>created by:<%= link_to @rental.user.username, user_path(@rental.user) %></p>
+<% end %>
 <p>
   title: <%= @rental.title %>
 </p>
 <p>
-  description: <%= @rental.description %>
+  description: <%= simple_format(@rental.description) %>
 </p>
-<p>
-<%= link_to 'edit', edit_rental_path(@rental) %>
-</p>
-<p>
-<%= link_to 'rentals listing', rentals_path %>
-</p>
+<% if logged_in? && current_user == @rental.user %>
+  <p><%= link_to 'edit', edit_rental_path(@rental) %></p>
+  <p><%= link_to 'delete listing', rental_path(@rental), method: :delete,data: { confirm: 'Are you sure?' } %></p>
+<% end %>
 
   <h4><b>created by:<%= link_to @rental.user.username, user_path(@rental.user) %></b></h4>
   
