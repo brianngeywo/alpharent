@@ -55,7 +55,7 @@ class RentalsController < ApplicationController
     @rental = Rental.find(params[:id])
   end
   def require_same_user
-    if current_user != @rental.user
+    if current_user != @rental.user and !current_user.admin?
         flash[:danger] = "you must be the owner of the rental"
         redirect_to root_path
     end

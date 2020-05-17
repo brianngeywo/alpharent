@@ -7,7 +7,7 @@
 <p>
   description: <%= simple_format(@rental.description) %>
 </p>
-<% if logged_in? && current_user == @rental.user %>
+<% if logged_in? && (current_user == rental.user || current_user.admin?) %>
   <p><%= link_to 'edit', edit_rental_path(@rental) %></p>
   <p><%= link_to 'delete listing', rental_path(@rental), method: :delete,data: { confirm: 'Are you sure?' } %></p>
 <% end %>

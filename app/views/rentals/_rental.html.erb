@@ -10,7 +10,7 @@
         <p><%= rental.id %></p>
                 <small>Created by: <%= rental.user.username if rental.user%>, <%= time_ago_in_words(rental.created_at)%> ago,
         last updated: <%= time_ago_in_words(rental.updated_at) %> ago</small>
-        <% if logged_in? && current_user == rental.user %>
+        <% if logged_in? && (current_user == rental.user || current_user.admin?)%>
           <p><%= link_to 'edit', edit_rental_path(rental) %></p>
           <p><%= link_to 'delete listing', rental_path(rental), method: :delete,data: { confirm: 'Are you sure?' } %></p>
         <% end %>

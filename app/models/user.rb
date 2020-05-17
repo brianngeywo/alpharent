@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    has_many :rentals
+    has_many :rentals, dependent: :destroy
     before_save {self.email = email.downcase}
     validates :username, presence: true, 
     uniqueness: { case_sensitive: false }, 

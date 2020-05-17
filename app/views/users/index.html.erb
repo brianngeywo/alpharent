@@ -9,6 +9,10 @@ all users list
         <p><%= link_to gravatar_for(user), user_path(user) %></p>
         <h4><b><%= link_to user.username, user_path(user) %></b></h4>
         <small><%= pluralize(user.rentals.count, "rentals") if user.rentals %></small>
+        <% if logged_in? && current_user.admin? %>
+          <p><%= link_to 'edit', edit_user_path(user) %></p>
+          <p><%= link_to 'delete user', user_path(user), method: :delete,data: { confirm: 'Are you sure you want to delete the user and all of their rentals?' } %></p>
+        <% end %>        
       </div>
     </div>      
   <% end %>
