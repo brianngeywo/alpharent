@@ -3978,3 +3978,490 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 44ms (Views: 33.0ms | ActiveRecord: 0.7ms | Allocations: 4242)
 
 
+Started GET "/users/11" for ::1 at 2020-05-17 12:37:59 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 176ms (Views: 150.9ms | ActiveRecord: 1.5ms | Allocations: 5355)
+
+
+Started GET "/users/11" for ::1 at 2020-05-17 12:40:32 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 30.7ms | ActiveRecord: 1.4ms | Allocations: 5368)
+
+
+Started GET "/img/card-top.jpg" for ::1 at 2020-05-17 12:40:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/img/card-top.jpg"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/11" for ::1 at 2020-05-17 12:41:19 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 328.0ms | Allocations: 75583)
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 0.6ms | Allocations: 77405)
+
+
+  
+ActionView::Template::Error (undefined method `gravator_for' for #<#<Class:0x00007f87e532f6a8>:0x00007f87e532dad8>):
+     6: </p>
+     7: 
+     8: <div class="max-w-sm rounded overflow-hidden shadow-lg">
+     9:   <%= gravator_for @user%>
+    10:   <div class="px-6 py-4">
+    11:     <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+    12:     <p class="text-gray-700 text-base">
+  
+app/views/users/show.html.erb:9
+Started GET "/users/11" for ::1 at 2020-05-17 12:41:38 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 313.9ms | Allocations: 75563)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.7ms | Allocations: 77386)
+
+
+  
+ActionView::Template::Error (undefined method `gravatar_for' for #<#<Class:0x00007f87e4be0168>:0x00007f87c80157a0>):
+     6: </p>
+     7: 
+     8: <div class="max-w-sm rounded overflow-hidden shadow-lg">
+     9:   <%= gravatar_for @user%>
+    10:   <div class="px-6 py-4">
+    11:     <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+    12:     <p class="text-gray-700 text-base">
+  
+app/views/users/show.html.erb:9
+Started GET "/users/11" for ::1 at 2020-05-17 12:50:41 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+...tar_id = Digest::md5:hexdigest(user.email.downcase)
+...                              ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+...:hexdigest(user.email.downcase)
+...                              ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+    image_tag(gravatar_url), alt: user.username, class:"r...
+                           ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+...rl), alt: user.username, class:"rounded-full")
+...                         ^~~~~~
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+...username, class:"rounded-full")
+...                              ^):
+  
+app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users/11" for ::1 at 2020-05-17 12:51:37 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+...tar_id = Digest::MD5:hexdigest(user.email.downcase)
+...                              ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+...:hexdigest(user.email.downcase)
+...                              ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+    image_tag(gravatar_url), alt: user.username, class:"r...
+                           ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+...rl), alt: user.username, class:"rounded-full")
+...                         ^~~~~~
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+...username, class:"rounded-full")
+...                              ^):
+  
+app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected '(', expecting keyword_end
+app/helpers/application_helper.rb:3: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users/11" for ::1 at 2020-05-17 12:52:07 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+    image_tag(gravatar_url), alt: user.username, class:"r...
+                           ^
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+...rl), alt: user.username, class:"rounded-full")
+...                         ^~~~~~
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+...username, class:"rounded-full")
+...                              ^):
+  
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected ',', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users/11" for ::1 at 2020-05-17 12:52:46 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting keyword_end
+...   image_tag(gravatar_url) alt: user.username, class:"rounde...
+...                           ^~~~
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+...url) alt: user.username, class:"rounded-full")
+...                         ^~~~~~
+/home/hacker/sites/alpharent/app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+...username, class:"rounded-full")
+...                              ^):
+  
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting keyword_end
+app/helpers/application_helper.rb:5: syntax error, unexpected tLABEL, expecting '='
+app/helpers/application_helper.rb:5: syntax error, unexpected ')', expecting keyword_end
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users/11" for ::1 at 2020-05-17 12:53:05 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 26.4ms | ActiveRecord: 5.7ms | Allocations: 11586)
+
+
+Started GET "/users/11/edit" for ::1 at 2020-05-17 12:55:39 +0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 56.8ms | Allocations: 1247)
+  Rendered users/edit.html.erb within layouts/application (Duration: 76.9ms | Allocations: 1566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 116.5ms | ActiveRecord: 0.6ms | Allocations: 5915)
+
+
+Started PATCH "/users/11" for ::1 at 2020-05-17 12:55:52 +0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"Vug/nGZKom795ewdfoaA17TxBZeMt1YjGZ5CQyonezUNO8F1KTRUY9k50iat60S6fGZyg/zj7mNnhJsPsFaRkQ==", "user"=>{"username"=>"brianngeywo", "email"=>"brianngeywo254@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Update your account", "id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /home/hacker/sites/alpharent/app/controllers/users_controller.rb:25)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["username", "brianngeywo"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "brianngeywo254@gmail.com"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "brianngeywo254@gmail.com"], ["password_digest", "$2a$12$IpMupFmiHVC2acoDWllTVeKa9PUd7mp9YerAPd9NeG.AsGW1Z9wDq"], ["updated_at", "2020-05-17 09:55:53.453816"], ["id", 11]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[35m (98.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 741ms (ActiveRecord: 101.8ms | Allocations: 7782)
+
+
+Started GET "/users/11" for ::1 at 2020-05-17 12:55:53 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 4277)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 13:00:25 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/_rental.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  Rendered rentals/_rental.html.erb (Duration: 52.8ms | Allocations: 10000)
+  Rendered rentals/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 10316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 69.2ms | ActiveRecord: 4.8ms | Allocations: 15786)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) AND "rentals"."id" != ? LIMIT ?[0m  [["user_id", 12], ["id", 4], ["LIMIT", 1]]
+  [1m[36mRental Update (1.3ms)[0m  [1m[33mUPDATE "rentals" SET "updated_at" = ?, "user_id" = ? WHERE "rentals"."id" = ?[0m  [["updated_at", "2020-05-17 10:06:21.994297"], ["user_id", 12], ["id", 4]]
+  [1m[35m (92.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (1.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) AND "rentals"."id" != ? LIMIT ?[0m  [["user_id", 12], ["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) AND "rentals"."id" != ? LIMIT ?[0m  [["user_id", 12], ["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) AND "rentals"."id" != ? LIMIT ?[0m  [["user_id", 2], ["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE "rentals"."user_id" IS NULL AND "rentals"."id" != ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) AND "rentals"."id" != ? LIMIT ?[0m  [["user_id", 12], ["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) AND "rentals"."id" != ? LIMIT ?[0m  [["user_id", 12], ["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/rentals" for ::1 at 2020-05-17 13:15:56 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/_rental.html.erb:7
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  Rendered rentals/_rental.html.erb (Duration: 46.4ms | Allocations: 5469)
+  Rendered rentals/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 5780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 68.7ms | ActiveRecord: 3.5ms | Allocations: 10457)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 13:15:59 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/_rental.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/rentals/_rental.html.erb:13
+  Rendered rentals/_rental.html.erb (Duration: 38.6ms | Allocations: 5137)
+  Rendered rentals/index.html.erb within layouts/application (Duration: 39.7ms | Allocations: 5223)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 1.3ms | Allocations: 8883)
+
+
+Started GET "/users/11" for ::1 at 2020-05-17 13:19:28 +0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered rentals/_rental.html.erb (Duration: 3.1ms | Allocations: 2288)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3018)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.7ms | Allocations: 13884)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: </p>
+    5: <div class="w-full bg-gray-200 border-2 border-black h-60">
+    6:   <div class="p-4">
+    7:     <% obj.each do |rental| %>
+    8:     <div class="shadow-2xl m-3">
+    9:       <div class="p-2">
+   10:         <h4><b><%= rental.title %></b></h4>
+  
+app/views/rentals/_rental.html.erb:7
+app/views/users/show.html.erb:10
+Started GET "/users/11" for ::1 at 2020-05-17 13:20:03 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 11.6ms | Allocations: 2603)
+  Rendered users/show.html.erb within layouts/application (Duration: 107.8ms | Allocations: 11539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 213ms (Views: 204.7ms | ActiveRecord: 1.1ms | Allocations: 18337)
+
+
+Started GET "/users/12" for ::1 at 2020-05-17 13:20:17 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 19.5ms | Allocations: 7715)
+  Rendered users/show.html.erb within layouts/application (Duration: 20.3ms | Allocations: 7876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.8ms | Allocations: 11990)
+
+
+Started GET "/users/12" for ::1 at 2020-05-17 13:24:30 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 9.4ms | Allocations: 1057)
+  Rendered users/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 26.0ms | ActiveRecord: 1.7ms | Allocations: 5436)
+
+
+Started GET "/users/12" for ::1 at 2020-05-17 13:25:01 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 10.8ms | Allocations: 1318)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1478)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 25.0ms | ActiveRecord: 1.2ms | Allocations: 5684)
+
+
+Started GET "/users/11" for ::1 at 2020-05-17 13:25:15 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (1.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 13.0ms | Allocations: 1048)
+  Rendered users/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 1.6ms | Allocations: 5436)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 13:25:21 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 4.0ms | Allocations: 1329)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1491)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 0.5ms | Allocations: 5721)
+
+
+Started GET "/users/9" for ::1 at 2020-05-17 13:25:44 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 3.8ms | Allocations: 1069)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.4ms | Allocations: 5429)
+
+
