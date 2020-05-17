@@ -12,4 +12,6 @@
 <%= link_to 'rentals listing', rentals_path %>
 </p>
 
-
+  <h4><b>created by:<%= link_to @rental.user.username, user_path(@rental.user) %></b></h4>
+  
+        

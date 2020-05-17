@@ -1,0 +1,16 @@
+<p class="text-blue-700 text-3xl font-bold">
+all users list
+</p>
+<div class="w-2/3 ml-32 bg-gray-200 border-2 border-black h-60">
+  <div class="p-4">
+    <% @users.each do |user| %>
+    <div class="shadow-2xl m-3">
+      <div class="p-2">
+        <p><%= link_to gravatar_for(user), user_path(user) %></p>
+        <h4><b><%= link_to user.username, user_path(user) %></b></h4>
+        <small><%= pluralize(user.rentals.count, "rentals") if user.rentals %></small>
+      </div>
+    </div>      
+  <% end %>
+  </div>
+</div>
