@@ -1,7 +1,7 @@
 class RentalsController < ApplicationController
 before_action :set_rental, only: [:edit, :update, :show, :destory]
-    def index
-      @rentals = Rental.all
+  def index
+    @rentals = Rental.all
   end
   
   def new
