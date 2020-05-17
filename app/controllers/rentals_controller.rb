@@ -11,6 +11,8 @@ before_action :set_rental, only: [:edit, :update, :show, :destory]
   end
   
   def create
+    @rental =Rental.new(rental_params)
+    @rental.user = User.last
       if @rental.save
         flash[:success] = "We're all set, its all good"
         redirect_to rental_path(@rental)
@@ -23,7 +25,7 @@ before_action :set_rental, only: [:edit, :update, :show, :destory]
   end
   def update
       if @rental.update_attributes(rental_params)
-        flash[:success] = "Object was successfully updated"
+        flash[:success] = "rental was successfully updated"
         redirect_to @rental
       else
         flash[:error] = "Something went wrong"

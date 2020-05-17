@@ -2742,3 +2742,398 @@ Migrating to CreateUsers (20200516175126)
   [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "kevo"], ["LIMIT", 1]]
   [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "brian.email.com"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToRentals (20200517053055)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToRentals (20200517053055)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "rentals" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200517053055"]]
+  [1m[35m (59.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE "rentals"."user_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRental Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mRental Create (4.0ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "validation test"], ["description", "new description"], ["created_at", "2020-05-17 05:43:58.636943"], ["updated_at", "2020-05-17 05:43:58.636943"], ["user_id", 2]]
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRental Load (0.9ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/rentals" for ::1 at 2020-05-17 08:45:14 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (1.0ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 86.5ms | Allocations: 7086)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 808ms (Views: 679.4ms | ActiveRecord: 6.0ms | Allocations: 16336)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-17 08:45:19 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 18.7ms | Allocations: 2986)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 33.6ms | Allocations: 3351)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 47.2ms | ActiveRecord: 0.0ms | Allocations: 7172)
+
+
+Started POST "/rentals" for ::1 at 2020-05-17 08:45:22 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"QQEBDJBhEFs+vo/tsbm2UOCBFrTV3Vg9o/1xT+18Z05py1kDXdPOCs+vAQ+kolrfGbFX1c6/dg3X90p57GjvTQ==", "rental"=>{"title"=>"", "description"=>""}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/rentals_controller.rb:14:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 08:45:55 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"I9cFtrblNZRE/0wch3KmqhAKRaKi4odO3qByS12aF/54BPtf+ZvDmWAjcidUH2LH2J0yttK2Pw6guqsHx+v9Wg==", "rental"=>{"title"=>"erffgb", "description"=>"ertfgh"}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 990)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/rentals_controller.rb:14:in `create'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" ORDER BY "rentals"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" ORDER BY "rentals"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ? LIMIT ?[0m  [["user_id", 9], ["LIMIT", 11]]
+Started POST "/rentals" for ::1 at 2020-05-17 08:51:14 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"I9cFtrblNZRE/0wch3KmqhAKRaKi4odO3qByS12aF/54BPtf+ZvDmWAjcidUH2LH2J0yttK2Pw6guqsHx+v9Wg==", "rental"=>{"title"=>"erffgb", "description"=>"ertfgh"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms | Allocations: 7668)
+
+
+  
+NoMethodError (undefined method `user=' for nil:NilClass):
+  
+app/controllers/rentals_controller.rb:14:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 08:52:15 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"I9cFtrblNZRE/0wch3KmqhAKRaKi4odO3qByS12aF/54BPtf+ZvDmWAjcidUH2LH2J0yttK2Pw6guqsHx+v9Wg==", "rental"=>{"title"=>"erffgb", "description"=>"ertfgh"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.3ms | Allocations: 935)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 17.3ms | ActiveRecord: 6.9ms | Allocations: 22920)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-17 08:52:36 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.3ms | Allocations: 614)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 721)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4407)
+
+
+Started POST "/rentals" for ::1 at 2020-05-17 08:52:49 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"60+AtU8t2lJAwqbe1EDlL5o8EfY6sORBdoZd4ig819ewnH5cAFMsX2QemOUHLSFCUqtm4krkXAEInISusk09cw==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing user"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15:in `create'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 3.6ms | Allocations: 765)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 872)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 14.4ms | ActiveRecord: 2.1ms | Allocations: 8694)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 08:54:54 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/controllers/rentals_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+...).permit(:title, :description), :user_id
+...                              ^):
+  
+app/controllers/rentals_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/rentals_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+app/controllers/rentals_controller.rb:52: syntax error, unexpected ',', expecting keyword_end
+Started GET "/rentals" for ::1 at 2020-05-17 08:55:11 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 6344)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 1.5ms | Allocations: 11032)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-17 08:55:18 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.1ms | Allocations: 619)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 726)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 4393)
+
+
+Started POST "/rentals" for ::1 at 2020-05-17 08:55:42 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"JXrUGLWXhM0E7ms9pbIR6Tj6a3tmsaMX3wY2e2sCNMYNsIwXeCVanPX/5d+wqf1mwcoqGn3TjSerDA1Naha8xQ==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing user id on create rentals"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.4ms | Allocations: 766)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 10.9ms | ActiveRecord: 3.0ms | Allocations: 17597)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 08:57:15 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 6340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 26.5ms | ActiveRecord: 1.9ms | Allocations: 11033)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-17 08:57:18 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 1.8ms | Allocations: 619)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 726)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 4393)
+
+
+Started POST "/rentals" for ::1 at 2020-05-17 08:57:27 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lqNio3jCDTXR3q2Rs/izuWD63T7ZneTvMIOZnOVc0n6+aTqstXDTZCDPI3Om4182mcqcX8L/yt9EiaKq5EhafQ==", "rental"=>{"title"=>"Marisa apartments", "description"=>"bhjnkml,mkjbhgvcbvnm"}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms | Allocations: 4663)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f451c03da50>
+Did you mean?  ids):
+  
+app/controllers/rentals_controller.rb:15:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 08:57:52 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lqNio3jCDTXR3q2Rs/izuWD63T7ZneTvMIOZnOVc0n6+aTqstXDTZCDPI3Om4182mcqcX8L/yt9EiaKq5EhafQ==", "rental"=>{"title"=>"Marisa apartments", "description"=>"bhjnkml,mkjbhgvcbvnm"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 1.9ms | Allocations: 779)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 10.1ms | ActiveRecord: 8.6ms | Allocations: 19996)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 09:03:08 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 6325)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 40.2ms | ActiveRecord: 2.2ms | Allocations: 11030)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-17 09:03:10 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 1.8ms | Allocations: 619)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 726)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 4375)
+
+
+Started POST "/rentals" for ::1 at 2020-05-17 09:03:30 +0300
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"i1B46OHZy68LtRD+mVUvUPMiJPRAlUCpmifaBJVoNjajmiDnLGsV/vqknhyMTsPfChJllVv3bpnuLeEylHy+NQ==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing users association to rentals\r\n"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 2.7ms | Allocations: 766)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 873)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 11.7ms | ActiveRecord: 2.6ms | Allocations: 14205)
+
+
+Started POST "/rentals" for ::1 at 2020-05-17 09:09:14 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lhMLl2waY9Vzpmjs3HeTxUxgTTpWLuq4pmSg+JZH1lrNwPV+I2SV2Fd6VtcPGleohPc6LiZ6UvjYfnm0DDY8/g==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing users association to rentals\r\n"}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 1.7ms | Allocations: 104515)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RentalsController:0x00007f451c2fa0b8>):
+  
+app/controllers/rentals_controller.rb:15:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 09:09:36 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lhMLl2waY9Vzpmjs3HeTxUxgTTpWLuq4pmSg+JZH1lrNwPV+I2SV2Fd6VtcPGleohPc6LiZ6UvjYfnm0DDY8/g==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing users association to rentals\r\n"}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 1.0ms | Allocations: 104515)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RentalsController:0x00005619c611dc90>):
+  
+app/controllers/rentals_controller.rb:15:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 09:10:14 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lhMLl2waY9Vzpmjs3HeTxUxgTTpWLuq4pmSg+JZH1lrNwPV+I2SV2Fd6VtcPGleohPc6LiZ6UvjYfnm0DDY8/g==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing users association to rentals\r\n"}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 315ms (ActiveRecord: 1.0ms | Allocations: 104531)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<RentalsController:0x00005619c7d107b8>):
+  
+app/controllers/rentals_controller.rb:15:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 09:10:33 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lhMLl2waY9Vzpmjs3HeTxUxgTTpWLuq4pmSg+JZH1lrNwPV+I2SV2Fd6VtcPGleohPc6LiZ6UvjYfnm0DDY8/g==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing users association to rentals\r\n"}, "commit"=>"submit"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.4ms | Allocations: 10145)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x00007f451c3b9e68>
+Did you mean?  ids):
+  
+app/controllers/rentals_controller.rb:15:in `create'
+Started POST "/rentals" for ::1 at 2020-05-17 09:10:50 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RentalsController#create as HTML
+  Parameters: {"authenticity_token"=>"lhMLl2waY9Vzpmjs3HeTxUxgTTpWLuq4pmSg+JZH1lrNwPV+I2SV2Fd6VtcPGleohPc6LiZ6UvjYfnm0DDY8/g==", "rental"=>{"title"=>"Marisa apartments", "description"=>"testing users association to rentals\r\n"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rentals" WHERE LOWER("rentals"."user_id") = LOWER(?) LIMIT ?[0m  [["user_id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[36mRental Create (0.4ms)[0m  [1m[32mINSERT INTO "rentals" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Marisa apartments"], ["description", "testing users association to rentals\r\n"], ["created_at", "2020-05-17 06:10:51.206079"], ["updated_at", "2020-05-17 06:10:51.206079"], ["user_id", 9]]
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rentals_controller.rb:16:in `create'
+Redirected to http://localhost:3000/rentals/11
+Completed 302 Found in 129ms (ActiveRecord: 87.9ms | Allocations: 17129)
+
+
+Started GET "/rentals/11" for ::1 at 2020-05-17 09:10:51 +0300
+Processing by RentalsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:48:in `set_rental'
+  Rendering rentals/show.html.erb within layouts/application
+  Rendered rentals/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.3ms | Allocations: 4938)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 09:10:57 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1748)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms | Allocations: 5395)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 09:11:37 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.8ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2262)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms | Allocations: 3536)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    13:       <td><%= rental.title %></td>
+    14:       <td><%= rental.description %></td>
+    15:       <td><%= rental.id %></td>
+    16:       <td><%= rental.user.id %></td>
+    17:       <td><%= link_to 'edit', edit_rental_path(rental) %></td>
+    18:       <td><%= link_to 'show', rental_path(rental) %></td>
+    19:       <td><%= link_to 'delete listing', rental, method: :delete,data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/rentals/index.html.erb:16
+app/views/rentals/index.html.erb:11
+Started GET "/rentals" for ::1 at 2020-05-17 09:11:45 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:11
+  Rendered rentals/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1954)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.3ms | Allocations: 6621)
+
+
+Started GET "/rentals" for ::1 at 2020-05-17 09:12:22 +0300
+Processing by RentalsController#index as HTML
+  Rendering rentals/index.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals"[0m
+  ↳ app/views/rentals/index.html.erb:12
+  Rendered rentals/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1957)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.3ms | Allocations: 6613)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" ORDER BY "rentals"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
