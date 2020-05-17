@@ -1,7 +1,8 @@
 <p class="text-blue-700 text-2xl font-bold">
 <%= link_to 'Add new listing', new_rental_path %>
+<%= link_to 'logout', logout_path, method: :delete %>
 </p>
-<div class="w-2/3 ml-32 bg-gray-200 border-2 border-black h-60">
+<div class="w-auto ml-32 bg-gray-200 border-2 border-black h-60">
   <div class="p-4">
     <% obj.each do |rental| %>
     <div class="shadow-2xl m-3">
@@ -11,6 +12,10 @@
         <p><%= rental.id %></p>
                 <small>Created by: <%= rental.user.username if rental.user%>, <%= time_ago_in_words(rental.created_at)%> ago,
         last updated: <%= time_ago_in_words(rental.updated_at) %> ago</small>
+        <p><%= link_to 'edit', edit_rental_path(rental) %></p>
+        <p><%= link_to 'show', rental_path(rental) %></p>
+        <p><%= link_to 'delete listing', rental, method: :delete,data: { confirm: 'Are you sure?' } %></p>
+        <p></p>
       </div>
     </div>      
   <% end %>

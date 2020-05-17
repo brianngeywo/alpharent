@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         flash[:success] = "Welcome to the alpha rent"
-        redirect_to rentals_url
+        redirect_to rentals_path
       else
         flash[:error] = "Something went wrong"
         render 'new'

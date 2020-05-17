@@ -5206,3 +5206,837 @@ Processing by RentalsController#show as HTML
 Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 0.5ms | Allocations: 6279)
 
 
+Started GET "/login" for ::1 at 2020-05-17 16:51:31 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-05-17 16:54:59 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+actionpack (6.0.3) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/hacker/.rvm/gems/ruby-2.5.7/bin/rake:23)
+Started GET "/login" for ::1 at 2020-05-17 17:01:35 +0300
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/hacker/sites/alpharent/app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+/home/hacker/sites/alpharent/app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+        @ = .new
+        ^~):
+  
+app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+Started GET "/login" for ::1 at 2020-05-17 17:04:21 +0300
+  
+SyntaxError (/home/hacker/sites/alpharent/app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+/home/hacker/sites/alpharent/app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+        @ = .new
+        ^~):
+  
+app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+app/controllers/sessions_controller.rb:3: `@' without identifiers is not allowed as an instance variable name
+app/controllers/sessions_controller.rb:3: syntax error, unexpected end-of-input
+Started GET "/login" for ::1 at 2020-05-17 17:04:35 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 1558)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms | Allocations: 2944)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <p>Login</p>
+    2: <%= form_for (:session), url: login_path do |f| %>
+    3:   <% if @user.errors.any? %>
+    4:     <h2>you encountered the following errors</h2>
+    5:     <ul>
+    6:         <% @user.errors.full_messages.each do |msg| %>
+  
+app/views/sessions/new.html.erb:3
+app/views/sessions/new.html.erb:2
+Started GET "/login" for ::1 at 2020-05-17 17:04:52 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1221)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1905)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <p>Login</p>
+    2: <%= form_for (:session), url: login_path do |f| %>
+    3:   <% if @user.errors.any? %>
+    4:     <h2>you encountered the following errors</h2>
+    5:     <ul>
+    6:         <% @user.errors.full_messages.each do |msg| %>
+  
+app/views/sessions/new.html.erb:3
+app/views/sessions/new.html.erb:2
+Started GET "/login" for ::1 at 2020-05-17 17:05:08 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 116.0ms | Allocations: 3668)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms | Allocations: 4937)
+
+
+  
+ActionView::Template::Error (undefined method `new_record?' for nil:NilClass):
+    11:     <%= f.password_field :password %>
+    12: </p>
+    13: <br>
+    14:     <%= f.submit (@user.new_record? ? "Create account" : "Update your account") %>
+    15: <% end %>
+  
+app/views/sessions/new.html.erb:14
+app/views/sessions/new.html.erb:2
+Started GET "/login" for ::1 at 2020-05-17 17:05:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 627)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 245ms (Views: 242.3ms | ActiveRecord: 0.0ms | Allocations: 6913)
+
+
+Started POST "/login" for ::1 at 2020-05-17 17:05:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"NoaT4dad6hXs5bxUjTaTQGfY5F8DNTKVv0KKElMPaj5tVW0ImeMcGMg5gm9eW1ctr0+TS3NhitXBWFNeyX6Amg==", "session"=>{"username"=>"brianngeywo254@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"submit"}
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.0ms | Allocations: 1713)
+
+
+Started GET "/login" for ::1 at 2020-05-17 17:07:26 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 4167)
+
+
+Started POST "/login" for ::1 at 2020-05-17 17:07:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"n2b9qmJukP9SJ2+ghJ9djKNxYmew7j6jHseeQLRvvxvEtQNDLRBm8nb7UZtX8pnha+YVc8C6huNg3UcMLh5Vvw==", "session"=>{"username"=>"Brian1", "password"=>"[FILTERED]"}, "commit"=>"submit"}
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 400)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 4044)
+
+
+Started POST "/login" for ::1 at 2020-05-17 17:09:33 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Fal21lBn00YAfQYlh8lB24vJGZp2leXIJMhr3BqWIjNOeog/HxklSyShOB5UpIW2Q15ujgbBXYha0rKQgOfIlw==", "session"=>{"username"=>"brianngeywo254@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"submit"}
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/login" for ::1 at 2020-05-17 17:51:50 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 4160)
+
+
+Started POST "/login" for ::1 at 2020-05-17 17:51:57 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"1zm5FOoCXBoSOdGzrxvBJ7zV61eyBTGKfBPBZaVrn0iM6kf9pXyqFzbl74h8dgVKdEKcQ8JRicoCCRgpPxp17A==", "session"=>{"username"=>"Brian1", "password"=>"[FILTERED]"}, "commit"=>"submit"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Brian1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 541ms (ActiveRecord: 18.7ms | Allocations: 8731)
+
+
+Started GET "/users" for ::1 at 2020-05-17 17:51:58 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 117.1ms | Allocations: 17500)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 133.3ms | ActiveRecord: 5.0ms | Allocations: 21662)
+
+
+Started GET "/users/7" for ::1 at 2020-05-17 17:52:06 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 31.9ms | Allocations: 1233)
+  Rendered users/show.html.erb within layouts/application (Duration: 56.9ms | Allocations: 1703)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 0.5ms | Allocations: 6204)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:52:17 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 75.7ms | Allocations: 6689)
+  Rendered users/show.html.erb within layouts/application (Duration: 76.7ms | Allocations: 6850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 93ms (Views: 89.4ms | ActiveRecord: 0.9ms | Allocations: 10977)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:52:47 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (3.6ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 19.7ms | Allocations: 1736)
+  Rendered users/show.html.erb within layouts/application (Duration: 22.4ms | Allocations: 2196)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 45.9ms | ActiveRecord: 4.5ms | Allocations: 7411)
+
+
+Started GET "/rentals/5/edit" for ::1 at 2020-05-17 17:53:09 +0300
+Processing by RentalsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rentals_controller.rb:48:in `set_rental'
+  Rendering rentals/edit.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 38.0ms | Allocations: 1216)
+  Rendered rentals/edit.html.erb within layouts/application (Duration: 49.3ms | Allocations: 1674)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 68.1ms | ActiveRecord: 0.3ms | Allocations: 7047)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:53:12 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 11.5ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2130)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 51.7ms | ActiveRecord: 0.5ms | Allocations: 6921)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:53:26 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 8.9ms | Allocations: 1672)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 37.6ms | ActiveRecord: 1.1ms | Allocations: 7359)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:54:06 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 705.7ms | Allocations: 149554)
+  Rendered users/show.html.erb within layouts/application (Duration: 711.2ms | Allocations: 150016)
+Completed 500 Internal Server Error in 718ms (ActiveRecord: 0.8ms | Allocations: 151852)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f76646d0808>:0x00007f76646c1358>
+Did you mean?  @user):
+     7:     <div class="shadow-2xl m-3">
+     8:       <div class="p-2">
+     9:         <h4><b><%= link_to rental.title, rental_path(rental) %></b></h4>
+    10:         <small><%= pluralize(user.rentals.count, "rentals") if user.rentals %></small>
+    11:         <h4><b><%=  %></b></h4>
+    12:         <p><%= truncate(rental.description, length: 100) %></p>
+    13:         <p><%= rental.id %></p>
+  
+app/views/rentals/_rental.html.erb:10
+app/views/rentals/_rental.html.erb:6
+app/views/users/show.html.erb:10
+Started GET "/users/2" for ::1 at 2020-05-17 17:54:51 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 12.0ms | Allocations: 1672)
+  Rendered users/show.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 36.8ms | ActiveRecord: 0.5ms | Allocations: 7365)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:55:10 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 10.4ms | Allocations: 1381)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1543)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.9ms | Allocations: 5762)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:55:23 +0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 21.7ms | Allocations: 9683)
+  Rendered users/show.html.erb within layouts/application (Duration: 33.9ms | Allocations: 15227)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 50.2ms | ActiveRecord: 2.2ms | Allocations: 31016)
+
+
+Started GET "/users" for ::1 at 2020-05-17 17:56:15 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 47.9ms | Allocations: 11371)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 56.0ms | ActiveRecord: 3.3ms | Allocations: 15177)
+
+
+Started GET "/users" for ::1 at 2020-05-17 17:56:17 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 72.6ms | Allocations: 11114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 79.9ms | ActiveRecord: 6.9ms | Allocations: 14764)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:56:22 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.1ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 3.3ms | Allocations: 1377)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 5761)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:57:23 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 10.4ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.6ms | Allocations: 7348)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:57:37 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 7.1ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 0.7ms | Allocations: 7340)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:57:49 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 12.3ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2137)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 45.3ms | ActiveRecord: 0.7ms | Allocations: 7377)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:58:21 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered rentals/_rental.html.erb (Duration: 24.4ms | Allocations: 5883)
+  Rendered users/show.html.erb within layouts/application (Duration: 30.5ms | Allocations: 6319)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.5ms | Allocations: 8141)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: </p>
+    4: <div class="w-full ml-32 bg-gray-200 border-2 border-black h-60">
+    5:   <div class="p-4">
+    6:     <% obj.each do |rental| %>
+    7:     <div class="shadow-2xl m-3">
+    8:       <div class="p-2">
+    9:         <h4 class="text-3xl text-teal-700 font-bold"><b><%= link_to rental.title, rental_path(rental) %></b></h4>
+  
+app/views/rentals/_rental.html.erb:6
+app/views/users/show.html.erb:10
+Started GET "/users/2" for ::1 at 2020-05-17 17:58:31 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 11.1ms | Allocations: 1695)
+  Rendered users/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 2169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 24.3ms | ActiveRecord: 0.7ms | Allocations: 7445)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:58:42 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 12.3ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 36.7ms | ActiveRecord: 1.0ms | Allocations: 7346)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:58:56 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.7ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 14.9ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 34.6ms | ActiveRecord: 1.8ms | Allocations: 7356)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:59:10 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.5ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 9.4ms | Allocations: 1672)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.6ms | Allocations: 7344)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 17:59:22 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.4ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:6
+  Rendered rentals/_rental.html.erb (Duration: 12.2ms | Allocations: 1671)
+  Rendered users/show.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2133)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 35.6ms | ActiveRecord: 1.0ms | Allocations: 7357)
+
+
+Started GET "/users" for ::1 at 2020-05-17 17:59:32 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 63.9ms | Allocations: 11315)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 71.9ms | ActiveRecord: 5.3ms | Allocations: 15113)
+
+
+Started GET "/login" for ::1 at 2020-05-17 17:59:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 5723)
+
+
+Started POST "/login" for ::1 at 2020-05-17 17:59:36 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"KgxwnBtBULAKAZ6RCVI5bMfccvWBP4DGT2IjiqJ8Ghtx3451VD+mvS7doKraP/0BD0sF4fFrOIYxePrGOA3wvw==", "session"=>{"username"=>"Brian1", "password"=>"[FILTERED]"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Brian1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 384ms (ActiveRecord: 0.3ms | Allocations: 1173)
+
+
+Started GET "/users" for ::1 at 2020-05-17 17:59:36 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 34.2ms | Allocations: 11120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 3.2ms | Allocations: 14790)
+
+
+Started GET "/users" for ::1 at 2020-05-17 18:02:32 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 11]]
+  ↳ app/views/users/index.html.erb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/index.html.erb:11
+  Rendered users/index.html.erb within layouts/application (Duration: 99.2ms | Allocations: 17914)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 130ms (Views: 111.3ms | ActiveRecord: 9.4ms | Allocations: 23912)
+
+
+Started GET "/users/2" for ::1 at 2020-05-17 18:03:24 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.3ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 21.9ms | Allocations: 6700)
+  Rendered users/show.html.erb within layouts/application (Duration: 23.2ms | Allocations: 7160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 1.1ms | Allocations: 11549)
+
+
+Started DELETE "/logout" for ::1 at 2020-05-17 18:03:27 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kt+bcUfgLqt48Js4pKyR8KpTNIxaf+h9BNTaNBYYtLPJDGWYCJ7YplwspQN3wVWdYsRDmCorUD16zgN4jGleFw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/" for ::1 at 2020-05-17 18:03:27 +0300
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.0ms | Allocations: 4249)
+
+
+Started DELETE "/logout" for ::1 at 2020-05-17 18:03:35 +0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kt+bcUfgLqt48Js4pKyR8KpTNIxaf+h9BNTaNBYYtLPJDGWYCJ7YplwspQN3wVWdYsRDmCorUD16zgN4jGleFw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 384)
+
+
+Started GET "/" for ::1 at 2020-05-17 18:03:35 +0300
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 3657)
+
+
+Started GET "/rentals/new" for ::1 at 2020-05-17 18:03:42 +0300
+Processing by RentalsController#new as HTML
+  Rendering rentals/new.html.erb within layouts/application
+  Rendered rentals/_form.html.erb (Duration: 13.9ms | Allocations: 1179)
+  Rendered rentals/new.html.erb within layouts/application (Duration: 26.3ms | Allocations: 1538)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 5791)
+
+
+Started GET "/login" for ::1 at 2020-05-17 18:05:12 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4774)
+
+
+Started POST "/login" for ::1 at 2020-05-17 18:05:14 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"X8Sx2lWm4x7xy8VKzPE+xgdAvBnAvFjDnALJEWs6V3wEF08zGtgVE9UX+3EfnPqrz9fLDbDo4IPiGBBd8Uu92A==", "session"=>{"username"=>"Brian1", "password"=>"[FILTERED]"}, "commit"=>"submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Brian1"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 408ms (ActiveRecord: 2.1ms | Allocations: 7209)
+
+
+Started GET "/users/4" for ::1 at 2020-05-17 18:05:15 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRental Load (0.2ms)[0m  [1m[34mSELECT "rentals".* FROM "rentals" WHERE "rentals"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/rentals/_rental.html.erb:7
+  Rendered rentals/_rental.html.erb (Duration: 11.4ms | Allocations: 6460)
+  Rendered users/show.html.erb within layouts/application (Duration: 15.8ms | Allocations: 7999)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 31.7ms | ActiveRecord: 1.7ms | Allocations: 12422)
+
+
