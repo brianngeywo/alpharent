@@ -16,8 +16,9 @@ class UsersController < ApplicationController
   def create
       @user = User.new(user_params)
       if @user.save
+        session[:user_id] = @user.id
         flash[:success] = "Welcome to the alpha rent"
-        redirect_to rentals_path
+        redirect_to user_path(@user)
       else
         flash[:error] = "Something went wrong"
         render 'new'
@@ -49,7 +50,7 @@ class UsersController < ApplicationController
 
   def require_same_user
     if current_user != @user
-      flash[:danger] = "you can only edit your own account"
+      flash[:danger] = "you can only edit you r own account"
       redirect_to root_path
     end
   end
