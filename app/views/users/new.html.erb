@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <h2>you encountered the following errors</h2>
+    <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul> 
+  <% end %>
+<p>signup for account</p>
+<P>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+</p>
+<p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+</p>
+<p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+</p>
+<br>
+    <%= f.submit "submit" %>
+<% end %>
