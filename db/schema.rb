@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_213544) do
+ActiveRecord::Schema.define(version: 2020_05_18_182316) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rental_categories", force: :cascade do |t|
+    t.integer "rental_id"
+    t.integer "category_id"
+  end
 
   create_table "rentals", force: :cascade do |t|
     t.string "title"
