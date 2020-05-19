@@ -1,1 +1,11 @@
+
+<% if logged_in? %>
+<%= link_to "all categories", categories_path %>
+
+<% Category.all.each do |category| %>
+    <%= link_to "#{category.name}", category_path(category) %>
+<% end %>
+
+<% end %>
+
 <%= render 'rental' , obj: @rentals%>

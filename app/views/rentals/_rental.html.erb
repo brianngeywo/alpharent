@@ -1,5 +1,3 @@
-<p class="text-blue-700 text-2xl font-bold">
-</p>
 <div class="w-auto ml-32 bg-gray-200 border-2 border-black h-60">
   <div class="p-4">
     <% obj.each do |rental| %>
@@ -8,6 +6,13 @@
         <h4 class="text-3xl text-teal-700 font-bold"><b><%= link_to rental.title, rental_path(rental) %></b></h4>
         <p><%= truncate(rental.description, length: 50) %></p>
         <p><%= rental.id %></p>
+        <% if rental.categories.any? %>
+        <div class="px-6 py-4">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"><%= render rental.categories %> &nbsp;</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+        </div>
+        <% end %>
                 <small>Created by: <%= rental.user.username if rental.user%>, <%= time_ago_in_words(rental.created_at)%> ago,
         last updated: <%= time_ago_in_words(rental.updated_at) %> ago</small>
         <% if logged_in? && (current_user == rental.user || current_user.admin?)%>

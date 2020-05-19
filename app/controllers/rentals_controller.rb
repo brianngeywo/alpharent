@@ -8,7 +8,7 @@ class RentalsController < ApplicationController
   end
   
   def new
-    @rental =Rental.new
+    @rental = Rental.new
   end
   def edit
     @rental = Rental.find(params[:id])
@@ -48,7 +48,7 @@ class RentalsController < ApplicationController
   private
   
   def rental_params
-    params.require(:rental).permit(:title, :description)
+    params.require(:rental).permit(:title, :description, category_ids: [])
   end
   
   def set_rental

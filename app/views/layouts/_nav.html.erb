@@ -12,6 +12,7 @@
     <div class="text-sm lg:flex-grow">
       <%= link_to 'rentals', rentals_path ,class:"block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"%>
       <%= link_to 'users', users_path ,class:"block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"%>
+      <%= link_to 'all categories', categories_path ,class:"block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"%>
       <% if logged_in? %>
         <%= link_to 'add listing', new_rental_path, class:"block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"%>
       <% end %>
