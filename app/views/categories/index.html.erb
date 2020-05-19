@@ -1,7 +1,7 @@
 <p class="text-blue-700 text-3xl font-bold">
 all categories list
 </p>
-      <% if logged_in? %>
+      <% if logged_in? && current_user.admin?  %>
         <%= link_to 'add categories', new_category_path, class:"block mt-4 lg:inline-block lg:mt-0 text-teal-700 font-bold hover:text-blue-700 mr-4"%>
       <% end %>
 <div class="w-2/3 ml-32 bg-gray-200 border-2 border-black h-60">

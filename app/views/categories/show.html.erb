@@ -2,5 +2,9 @@
 <p>
   title: <%= "Category: " + @category.name %>
 </p>
+ <% if logged_in? && current_user.admin? %>
+          <p><%= link_to 'edit', edit_category_path(@category) %></p>
+          <p><%= link_to 'delete category', category_path(@category), method: :delete,data: { confirm: 'Are you sure you want to delete the category and all of their rentals?' } %></p>
+        <% end %>  
 <%= render 'rentals/rental' , obj: @category_rentals%>
 
