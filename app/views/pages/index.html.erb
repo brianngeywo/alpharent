@@ -1,1 +1,30 @@
-<h1>welcome to my homepage</h1>
+
+<div class="bg-gray-100 mb-32">
+  <div class="bg-cover bg-no-repeat h-66 bg-center"
+    style="background-image: url(https://images.unsplash.com/photo-1556193151-cac363ec3657?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
+    <p class="text-6xl text-white font-bold text-center py-2 mb-2 capitalize pt-20">search rentals online</p>
+    <div class="p-6 bg-white ml-24 mr-24 rounded shadow-2xl mt-8">
+      <form>
+        <div class="">
+          <input
+            class="bg-gray-100 py-6 px-6 m-2 border-gray-200 border-2 rounded"
+            type="text" placeholder="try the nearest town">
+          <input
+            class="bg-gray-100 py-6 px-6 m-2 border-gray-200 border-2 rounded"
+            type="text" placeholder="try any amount">
+          <button
+            class="bg-teal-700 py-3 px-8 text-4xl font-bold text-white"
+            type="button">
+            search
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%= link_to "all categories", categories_path %>
+<i class="fab fa-twitter fa-2x"></i>
+<% Category.all.each do |category| %>
+    <%= link_to "#{category.name}", category_path(category) %>
+<% end %>
+

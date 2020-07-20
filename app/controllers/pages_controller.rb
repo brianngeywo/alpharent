@@ -1,5 +1,19 @@
 class PagesController < ApplicationController
   def index
-    redirect_to rentals_path if logged_in?
-  end    
+  end
+
+  def buy
+  end
+
+  def home
+  end
+
+  def about_us
+  end
+
+  def prop_details
+  end
+
+  def request_listing
+  end
 end

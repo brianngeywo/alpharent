@@ -1,34 +1,11 @@
-<% if @rental.user %>
-  <p>created by:<%= link_to @rental.user.username, user_path(@rental.user) %></p>
-<% end %>
-<p>
-  title: <%= @rental.title %>
-</p>
-<p>
-  description: <%= simple_format(@rental.description) %>
-</p>
-
-<% if @rental.categories.any? %>
-  <%= render @rental.categories %> &nbsp;
-<% end %>
-
-<% if logged_in? && (current_user == @rental.user || current_user.admin?) %>
-  <p><%= link_to 'edit', edit_rental_path(@rental) %></p>
-  <p><%= link_to 'delete listing', rental_path(@rental), method: :delete,data: { confirm: 'Are you sure?' } %></p>
-<% end %>
-  
-        
+<h1>Pages#prop_details</h1>
+<p>Find me in app/views/pages/prop_details.html.erb</p>
+<%= render 'layouts/mobile_nav' %>
 <div class="bg-transparent p-4">
     <img class="object-cover h-70 w-full rounded"
         src="https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
 </div>
-<div class="text-6xl text-teal-700 font-bold px-6 py-2 capitalize"><%= @rental.title %></div>
-<% if @rental.user %>
-  <p class="text-3xl font-semibold text-gray-700 font-sans px-6 capitalize">Agent: <%= link_to @rental.user.username, user_path(@rental.user) %></p>
-<% end %>
-<% if @rental.categories.any? %>
-  <div class="text-2xl text-gray-700 font-sans px-6 capitalize"><%= render @rental.categories %> &nbsp;</div>
-<% end %>
+<div class="text-6xl text-teal-700 font-bold px-6 py-2 capitalize">serova homes</div>
 <div class="text-4xl text-gray-700 font-sans px-6 capitalize"><i class="fa fa-map-marker-alt mr-3"></i>eldoret, hawaii
 </div>
 <hr>
@@ -87,7 +64,7 @@
         </div>
     </div>
     <div id="tabs-3">
-        <p class="text-justify text-3xl mx-6 tracking-wider leading-relaxed text-left"><%= @rental.description %>Mauris eleifend est et turpis.
+        <p class="text-justify text-3xl mx-6 tracking-wider leading-relaxed text-left">Mauris eleifend est et turpis.
             Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula
             accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti
             sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel
@@ -101,7 +78,3 @@
 
     </div>
 </div>
-<% if logged_in? && (current_user == @rental.user || current_user.admin?) %>
-  <%= link_to 'edit', edit_rental_path(@rental), class: "text-black text-3xl px-4 py-6 font-bold" %>
-  <%= link_to 'delete listing', rental_path(@rental), method: :delete,data: { confirm: 'Are you sure?' }, class: "font-bold text-red-800 text-3xl px-4"  %>
-<% end %>

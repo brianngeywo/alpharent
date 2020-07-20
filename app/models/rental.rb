@@ -7,6 +7,9 @@ class Rental < ActiveRecord::Base
     validates :description, presence: true, length: {minimum: 10, maximum: 10000}
     validates :user_id, presence: true
     
-       
-    
+    def self.search_by(search_term)
+        where("LOWER(title) LIKE :search_term", 
+        search_term: "%#{search_term}")
+    end
+        
 end

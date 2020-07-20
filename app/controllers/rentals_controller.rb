@@ -3,8 +3,12 @@ class RentalsController < ApplicationController
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
 
-  def index
+  def index    
     @rentals = Rental.all
+    if params[:search]
+      @search_term = params[:search]
+      @rentals = @rentals.search_by(@search_term)
+    end
   end
   
   def new
